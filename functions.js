@@ -10,7 +10,7 @@ function change_color(id, code) {
 	if (code != 0){
 
 		// Loop through the other radios:
-		for (let i = 1; i < 6; i++) {
+		for (let i = 0; i < 5; i++) {
 			
 			// If "id" is different from the current iteration, disable this iteration's radio for the color "code"
 			if (id != `circle${i}`){
@@ -20,9 +20,9 @@ function change_color(id, code) {
 	}
 
 	// Reenable the radios for the old colors
-	for (let i = 1; i < 6; i++) {
+	for (let i = 0; i < 5; i++) {
 		if (ELEMENT_CLASS_LIST.contains(`colorcode${i}`)){
-			for (let j = 1; j < 6; j++) {
+			for (let j = 0; j < 5; j++) {
 				document.getElementById(`color${j}-${i}`).disabled = false;
 			}
 		}
@@ -46,7 +46,7 @@ function compute_submission(){
 	countdown()
 
 	// Reset the selections
-	for (let i = 1; i < 6; i++) {
+	for (let i = 0; i < 5; i++) {
 		document.getElementById(`color${i}-${0}`).checked = true
 		change_color(`circle${i}`, 0)
 	}
@@ -63,7 +63,7 @@ function insert_past_guess(){
 	ROW.classList.add("row", "justify-content-center", "align-items-center")
 
 	// Loop five times to add the five columns:
-	for (let i = 1; i < 6; i++) {
+	for (let i = 0; i < 5; i++) {
 
 		// Create the column and add its bootstrap styling classes.
 		const COLUMN = document.createElement("div")
@@ -107,7 +107,7 @@ function insert_past_guess(){
 // Function for grading the submission
 function grade_submission(){
 	let grade = 0
-	for (let i = 1; i < 6; i++) {
+	for (let i = 0; i < 5; i++) {
 		if (ORDER[i - 1] == document.querySelector(`input[name="radio${i}"]:checked`).value){
 			grade++;
 		}
