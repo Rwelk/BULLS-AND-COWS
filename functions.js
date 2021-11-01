@@ -20,7 +20,7 @@ function change_color(id, code) {
 	}
 
 	// Reenable the radios for the old colors
-	for (let i = 0; i < 5; i++) {
+	for (let i = 0; i < 6; i++) {
 		if (ELEMENT_CLASS_LIST.contains(`colorcode${i}`)){
 			for (let j = 0; j < 5; j++) {
 				document.getElementById(`color${j}-${i}`).disabled = false;

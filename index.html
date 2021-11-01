@@ -45,18 +45,21 @@
 		<div class="row justify-content-center">
 
 			<!-- First Color -->
-			<div class="col-auto col-sm-1 m-4">
+			<div class="col-sm-1 m-4">
 
-				<div class="row">
+				
+				<div class="row row-cols-sm-1 justify-content-center">
 
 					<!-- Circle Shape for Visualization -->
-					<div class="col align-self-center justify-content-left">	
+					<div class="col-3 align-self-center justify-content-left">	
 						<p class="circle_big mb-sm-3" id="circle0"></p>
 					</div>
 					<div class="d-none d-sm-block w-100"></div>
 
 					<!-- Stack of Radio Buttons -->
-					<div class="col">
+
+					<!-- At mobile size, the list of six buttons is split into 2 stacks of 3. -->
+					<div class="col-3">
 						<!-- Remove Color -->
 						<div class="form-check">
 							<input class="form-check-input" type="radio" name="radio0" id="color0-0" value="0" onclick="change_color('circle0', value)" checked>
@@ -75,6 +78,10 @@
 							<label class="form-check-label" for="color0-2">Orange</label>
 						</div>
 
+					</div>
+
+					<div class="col-3">
+						
 						<!-- Turn Circle colorcode3 -->
 						<div class="form-check">
 							<input class="form-check-input" type="radio" name="radio0" id="color0-3" value="3" onclick="change_color('circle0', value)">
@@ -95,11 +102,11 @@
 					</div>						
 				</div>					
 			</div>
-			<div class="d-sm-none w-100"></div>
+			
 
 
 			<!-- Second Color -->
-			<div class="col-auto col-sm-1 m-4">
+			<div class="col-sm-1 m-4">
 
 				<div class="row">
 
@@ -149,11 +156,11 @@
 					</div>						
 				</div>					
 			</div>
-			<div class="d-sm-none w-100"></div>
+			
 
 
 			<!-- Third Color -->
-			<div class="col-auto col-sm-1 m-4">
+			<div class="col-1 m-4">
 
 				<div class="row">
 
@@ -206,11 +213,11 @@
 
 				
 			</div>
-			<div class="d-sm-none w-100"></div>
+			
 
 
 			<!-- Fourth Color -->
-			<div class="col-auto col-sm-1 m-4">
+			<div class="col-1 m-4">
 
 				<div class="row">
 
@@ -261,11 +268,11 @@
 					</div>
 				</div>
 			</div>
-			<div class="d-sm-none w-100"></div>
+			
 
 
 			<!-- Fifth Color -->
-			<div class="col-auto col-sm-1 m-4">
+			<div class="col-1 m-4">
 
 				<div class="row">
 
@@ -316,7 +323,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="d-sm-none w-100"></div>
+			
 
 		<!-- Submit Button -->
 		<div class="pb-4 d-flex justify-content-center">
