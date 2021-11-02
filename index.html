@@ -50,14 +50,14 @@
 				<div class="row row-cols-sm-1 justify-content-center">
 
 					<!-- Circle Shape for Visualization -->
-					<div class="col-3 align-self-center">	
+					<div class="col-auto color_selection align-self-center">	
 						<p class="circle_big mb-sm-3" id="circle0"></p>
 					</div>
 
 					<!-- Stack of Radio Buttons -->
 					<!-- At mobile size, the list of six buttons is split into 2 stacks of 3. -->
 					<!-- Also, the column is given a size of 3 to space out the text enough. -->
-					<div class="col-3">
+					<div class="col-auto color_selection">
 
 						<!-- Remove Color -->
 						<div class="form-check">
@@ -78,7 +78,7 @@
 						</div>
 					</div>
 
-					<div class="col-3">
+					<div class="col-auto color_selection">
 						
 						<!-- Turn Circle colorcode3 -->
 						<div class="form-check">
@@ -108,14 +108,14 @@
 				<div class="row row-cols-sm-1 justify-content-center">
 
 					<!-- Circle Shape for Visualization -->
-					<div class="col-3 align-self-center">	
+					<div class="col-auto color_selection align-self-center">	
 						<p class="circle_big mb-sm-3" id="circle1"></p>
 					</div>
 
 					<!-- Stack of Radio Buttons -->
 					<!-- At mobile size, the list of six buttons is split into 2 stacks of 3. -->
 					<!-- Also, the column is given a size of 3 to space out the text enough. -->
-					<div class="col-3">
+					<div class="col-auto color_selection">
 
 						<!-- Remove Color -->
 						<div class="form-check">
@@ -136,7 +136,7 @@
 						</div>
 					</div>
 
-					<div class="col-3">
+					<div class="col-auto color_selection">
 
 						<!-- Turn Circle colorcode3 -->
 						<div class="form-check">
@@ -166,14 +166,14 @@
 				<div class="row row-cols-sm-1 justify-content-center">
 
 					<!-- Circle Shape for Visualization -->
-					<div class="col-3 align-self-center">
+					<div class="col-auto color_selection align-self-center">
 						<p class="circle_big mb-sm-3" id="circle2"> </p>
 					</div>
 
 					<!-- Stack of Radio Buttons -->
 					<!-- At mobile size, the list of six buttons is split into 2 stacks of 3. -->
 					<!-- Also, the column is given a size of 3 to space out the text enough. -->
-					<div class="col-3">
+					<div class="col-auto color_selection">
 
 						<!-- Remove Color -->
 						<div class="form-check">
@@ -196,7 +196,7 @@
 						
 					</div>
 
-					<div class="col-3">
+					<div class="col-auto color_selection">
 
 						<!-- Turn Circle colorcode3 -->
 						<div class="form-check">
@@ -226,14 +226,14 @@
 				<div class="row row-cols-sm-1 justify-content-center">
 
 					<!-- Circle Shape for Visualization -->
-					<div class="col-3 align-self-center">	
+					<div class="col-auto color_selection align-self-center">	
 						<p class="circle_big mb-sm-3" id="circle3"> </p>
 					</div>
 					
 					<!-- Stack of Radio Buttons -->
 					<!-- At mobile size, the list of six buttons is split into 2 stacks of 3. -->
 					<!-- Also, the column is given a size of 3 to space out the text enough. -->
-					<div class="col-3">
+					<div class="col-auto color_selection">
 						<!-- Remove Color -->
 						<div class="form-check">
 							<input class="form-check-input" type="radio" name="radio3" id="color3-0" value="0" onclick="change_color('circle3', value)" checked>
@@ -253,7 +253,7 @@
 						</div>
 					</div>
 
-					<div class="col-3">
+					<div class="col-auto color_selection">
 						
 						<!-- Turn Circle colorcode3 -->
 						<div class="form-check">
@@ -283,14 +283,14 @@
 				<div class="row row-cols-sm-1 justify-content-center">
 
 					<!-- Circle Shape for Visualization -->
-					<div class="col-3 align-self-center">
+					<div class="col-auto color_selection align-self-center">
 						<p class="circle_big mb-sm-3" id="circle4"> </p>
 					</div>
 
 					<!-- Stack of Radio Buttons -->
 					<!-- At mobile size, the list of six buttons is split into 2 stacks of 3. -->
 					<!-- Also, the column is given a size of 3 to space out the text enough. -->
-					<div class="col-3">
+					<div class="col-auto color_selection">
 
 						<!-- Remove Color -->
 						<div class="form-check">
@@ -311,7 +311,7 @@
 						</div>
 					</div>
 
-					<div class="col-3">
+					<div class="col-auto color_selection">
 						
 						<!-- Turn Circle colorcode3 -->
 						<div class="form-check">
@@ -333,18 +333,17 @@
 					</div>
 				</div>
 			</div>
-			
 
-		<!-- Submit Button -->
-		<div class="pb-4 d-flex justify-content-center">
-			<button class="btn bg-secondary text-white" id="submit" onclick="compute_submission()">Submit</button>
+
+			<!-- Submit Button -->
+			<div class="pb-4 d-flex justify-content-center">
+				<button class="btn bg-secondary text-white" id="submit" onclick="compute_submission()">Submit</button>
+			</div>
 		</div>
-		
-		
-		
-		<!-- Past guesses go here. -->
+
+		<!-- Past guesses will be displayed here. -->
 		<h1 class="p-2 text-center">Past Guesses:</h1>
-		<div class="row justify-content-center">
+		<div class="">
 			<ol id="past_guesses"></ol>
 		</div>
 

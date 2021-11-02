@@ -1,7 +1,7 @@
 :root {
 	--color_0: #ffffff;
 	--color_1: #dc3545;
-	--color_2: #e18102;
+	--color_2: #fd7e14;
 	--color_3: #e1c107;
 	--color_4: #28a745;
 	--color_5: #007bff;
@@ -22,10 +22,10 @@ body {
 	margin: 0;
 }
 .circle_small {
-	height: 30px;
-	width: 30px;
+	height: 20px;
+	width: 20px;
 	border-radius: 50%;
-	border: 3px solid black;
+	border: 2px solid black;
 	background-color: var(--color_0);
 }
 
@@ -33,41 +33,50 @@ body {
 .colorcode0 {
 	background-color: var(--color_0);
 }
-
 .colorcode1 {
 	background-color: var(--color_1);
 }
-
 .colorcode2 {
 	background-color: var(--color_2);
 }
-
 .colorcode3 {
 	background-color: var(--color_3);
 }
-
 .colorcode4 {
 	background-color: var(--color_4);
 }
-
 .colorcode5 {
 	background-color: var(--color_5);
 }
 
+.color_selection {
+	min-width: 5rem;
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+	padding: 0;
+}
+
+/* Class for centering the award image inside the modal. */
 .center {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
 }
 
+ol {
+	margin: 0;
+	padding: 0;
+}
+
 .grade_display {
-	width: 3rem;
-	height: 3.5rem;
+	width: 2rem;
+	height: 1.5rem;
 	text-align: center;
 	display: flex;
 	justify-content: center;
 	align-content: center;
 	flex-direction: column;
+	margin-bottom: 0.125rem;
 }
 
 /* The first time the accordion is loaded, it has some default styling.

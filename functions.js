@@ -1,3 +1,23 @@
+// Function for generating a randomized order to the colors on page load.
+// "state" determines whether the function will return the default order of [3, 1, 5, 2, 4], or a shuffled array.
+function random_order(state=true) {
+
+	// By default, the order is placed into a configuration that should be easier to guess.
+	const order = [3, 1, 5, 2, 4]
+
+	// If state is true, then we want to truly shuffle the order.
+	if (state) {
+		for (let i = 4; i > 0; i--) {
+			let j = Math.floor(Math.random() * (i + 1));
+			[order[i], order[j]] = [order[j], order[i]];
+		}
+
+	}
+
+	// Return either the default order, or the newly shuffled order.
+	return order
+}
+
 // Function for changing the colors of the circles when a new radio is selected.
 // "id" is the id of the circle who's color needs to be changed.
 // "code" is the color that the circle will be changed to, in the form of an integer.
@@ -88,8 +108,8 @@ function insert_past_guess(){
 
 	// Next create the element the grade will go into, in this case a bootstrap styled <p> tag.
 	// Also, give it the class grade_display so that it can be styled with my own CSS.
-	const grade = document.createElement("p")
-	grade.classList.add("display-5", "mx-1", "mb-0", "grade_display")
+	const grade = document.createElement("h4")
+	grade.classList.add("grade_display")
 
 	// Set the text of the grade element to the result of the function grade_submission()
 	grade.innerText = grade_submission()
@@ -106,13 +126,18 @@ function insert_past_guess(){
 
 // Function for grading the submission
 function grade_submission(){
+
+	// "grade" is the counter.
 	let grade = 0
+
+	// Count all the colors that are the same between the radio and "ORDER"
 	for (let i = 0; i < 5; i++) {
-		if (ORDER[i - 1] == document.querySelector(`input[name="radio${i}"]:checked`).value){
+		if (ORDER[i] == document.querySelector(`input[name="radio${i}"]:checked`).value){
 			grade++;
 		}
 	}
 
+	// If all of the colors are correct, trigger the modal to show the player won.
 	if (grade == 5){
 		trigger_win_modal()
 	}
@@ -121,7 +146,7 @@ function grade_submission(){
 }
 
 
-// Function for triggering the modal that says the player won
+// Function for triggering the modal that says the player won.
 function trigger_win_modal() {
 	const MODAL = new bootstrap.Modal(document.getElementById("win_modal"), {})
 	MODAL.show();
@@ -201,32 +226,17 @@ function convert_secs(n){
 }
 
 
+// Print to console to confirm the file works.
 console.log("Running functions.js")
 
-// Generate a new randomized order to the colors on page load.
-function random_order(state=true) {
-
-	// By default, the order is placed into a configuration that shoud be easier to guess.
-	const order = [3, 1, 5, 2, 4]
-
-	// If state is true, then we want to truly shuffle the order.
-	if (state) {
-		for (let i = 4; i > 0; i--) {
-			let j = Math.floor(Math.random() * (i + 1));
-			[order[i], order[j]] = [order[j], order[i]];
-		}
-
-	}
-
-	// Return either the default order, or the newly shuffled order.
-	return order
-}
-
 // Global WAIT_TIME to determine how long the timer on the Submit button should be for.
-const WAIT_TIME = 30
+const WAIT_TIME = 0
 
 // Global ORDER to determine what order the colors should be in.
+// Because false is passed into random_order(), it returns the default sequence [3, 1, 5, 2, 4].
 const ORDER = random_order(false)
 
 console.log(ORDER)
+
+// countdown() must be called on page load to prevent people from placing a guess and imediately refreshing.
 countdown()
