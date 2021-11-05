@@ -230,7 +230,7 @@ function convert_secs(n){
 console.log("Running functions.js")
 
 // Global WAIT_TIME to determine how long the timer on the Submit button should be for.
-const WAIT_TIME = 0
+const WAIT_TIME = 15
 
 // Global ORDER to determine what order the colors should be in.
 // Because false is passed into random_order(), it returns the default sequence [3, 1, 5, 2, 4].
